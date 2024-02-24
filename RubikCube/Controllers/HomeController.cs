@@ -123,6 +123,24 @@ namespace RubikCube.Controllers
             });
         }
 
+        public IActionResult RotateLeft90Clockwise()
+        {
+            _rubikCubeService.rotateLeft90Clockwise();
+            return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
+            {
+                faces = _rubikCubeService.getRubikFaces()
+            });
+        }
+
+        public IActionResult RotateLeft90AntiClockwise()
+        {
+            _rubikCubeService.rotateLeft90AntiClockwise();
+            return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
+            {
+                faces = _rubikCubeService.getRubikFaces()
+            });
+        }
+
         public IActionResult Privacy()
         {
             return View();

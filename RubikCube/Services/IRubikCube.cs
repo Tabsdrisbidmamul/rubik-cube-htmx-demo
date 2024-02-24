@@ -14,6 +14,8 @@
         void rotateDown90AntiClockwise();
         void rotateRight90Clockwise();
         void rotateRight90AntiClockwise();
+        void rotateLeft90Clockwise();
+        void rotateLeft90AntiClockwise();
         
         
     }
