@@ -324,12 +324,91 @@ namespace RubikCube.Services
                 _rubikCubeFaces[4][8]
             ];
 
-            char[] right = [_rubikCubeFaces[3][6],]
+            char[] right = [
+                _rubikCubeFaces[3][6],
+                _rubikCubeFaces[3][7],
+                _rubikCubeFaces[3][8]
+            ];
+
+            char[] front = [
+                _rubikCubeFaces[0][6],
+                _rubikCubeFaces[0][7],
+                _rubikCubeFaces[0][8],
+            ];
+
+            char[] left = [
+                _rubikCubeFaces[1][6],
+                _rubikCubeFaces[1][7],
+                _rubikCubeFaces[1][8],
+            ];
+
+            // move back to left
+            _rubikCubeFaces[1][6] = back[0];
+            _rubikCubeFaces[1][7] = back[1];
+            _rubikCubeFaces[1][8] = back[2];
+
+            // move left to front
+            _rubikCubeFaces[0][6] = left[0];
+            _rubikCubeFaces[0][7] = left[1];
+            _rubikCubeFaces[0][8] = left[2];
+
+            // move front to right
+            _rubikCubeFaces[3][6] = front[0];
+            _rubikCubeFaces[3][7] = front[1];
+            _rubikCubeFaces[3][8] = front[2];
+
+            // move right to back
+            _rubikCubeFaces[4][6] = right[0];
+            _rubikCubeFaces[4][7] = right[1];
+            _rubikCubeFaces[4][8] = right[2];
         }
 
         public void rotateDown90AntiClockwise()
         {
-            throw new NotImplementedException();
+            char[] back = [
+                _rubikCubeFaces[4][6],
+                _rubikCubeFaces[4][7],
+                _rubikCubeFaces[4][8]
+            ];
+
+            char[] right = [
+                _rubikCubeFaces[3][6],
+                _rubikCubeFaces[3][7],
+                _rubikCubeFaces[3][8]
+            ];
+
+            char[] front = [
+                _rubikCubeFaces[0][6],
+                _rubikCubeFaces[0][7],
+                _rubikCubeFaces[0][8],
+            ];
+
+            char[] left = [
+                _rubikCubeFaces[1][6],
+                _rubikCubeFaces[1][7],
+                _rubikCubeFaces[1][8],
+            ];
+
+            // move left to back
+            _rubikCubeFaces[4][6] = left[0];
+            _rubikCubeFaces[4][7] = left[1];
+            _rubikCubeFaces[4][8] = left[2];
+
+            // back to right
+            _rubikCubeFaces[3][6] = back[0];
+            _rubikCubeFaces[3][7] = back[1];
+            _rubikCubeFaces[3][8] = back[2];
+
+            // mopve right to front
+            _rubikCubeFaces[0][6] = right[0];
+            _rubikCubeFaces[0][7] = right[1];
+            _rubikCubeFaces[0][8] = right[2];
+
+            // move front to left
+            _rubikCubeFaces[1][6] = front[0];
+            _rubikCubeFaces[1][7] = front[1];
+            _rubikCubeFaces[1][8] = front[2];
+
         }
 
         public void rotateRight90Clockwise()
