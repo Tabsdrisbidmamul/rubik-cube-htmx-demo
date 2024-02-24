@@ -67,6 +67,12 @@
 
             <button hx-get="/Home/RotateDown90AntiClockwise" hx-target="#rubik-container" type="button">Rotate down 90 anti clockwise</button>
         </div>
+
+        <div class="controls__group">
+            <button hx-get="/Home/RotateRight90Clockwise" hx-target="#rubik-container" type="button">Rotate right 90 clockwise</button>
+
+            <button hx-get="/Home/RotateRight90AntiClockwise" hx-target="#rubik-container" type="button">Rotate right 90 anti clockwise</button>
+        </div>
     </div>
 
 
@@ -95,6 +101,7 @@
         margin-bottom: 20px;
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     .controls__group {

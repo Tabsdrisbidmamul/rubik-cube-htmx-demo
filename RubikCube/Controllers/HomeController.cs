@@ -104,6 +104,24 @@ namespace RubikCube.Controllers
                 faces = _rubikCubeService.getRubikFaces()
             });
         }
+        
+        public IActionResult RotateRight90Clockwise()
+        {
+            _rubikCubeService.rotateRight90Clockwise();
+            return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
+            {
+                faces = _rubikCubeService.getRubikFaces()
+            });
+        }
+
+        public IActionResult RotateRight90AntiClockwise()
+        {
+            _rubikCubeService.rotateRight90AntiClockwise();
+            return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
+            {
+                faces = _rubikCubeService.getRubikFaces()
+            });
+        }
 
         public IActionResult Privacy()
         {

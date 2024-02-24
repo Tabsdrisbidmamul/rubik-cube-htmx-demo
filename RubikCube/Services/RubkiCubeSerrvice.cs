@@ -413,12 +413,97 @@ namespace RubikCube.Services
 
         public void rotateRight90Clockwise()
         {
-            throw new NotImplementedException();
+            char[] front = [
+                _rubikCubeFaces[0][2],
+                _rubikCubeFaces[0][5],
+                _rubikCubeFaces[0][8],
+            ];
+
+            char[] top = [
+                _rubikCubeFaces[5][2],
+                _rubikCubeFaces[5][5],
+                _rubikCubeFaces[5][8],
+            ];
+
+            char[] back = [
+                _rubikCubeFaces[4][0],
+                _rubikCubeFaces[4][3],
+                _rubikCubeFaces[4][6],
+            ];
+
+            char[] bottom = [
+                _rubikCubeFaces[2][2],
+                _rubikCubeFaces[2][5],
+                _rubikCubeFaces[2][8],
+            ];
+
+            // move front to top
+            _rubikCubeFaces[5][2] = front[0];
+            _rubikCubeFaces[5][5] = front[1];
+            _rubikCubeFaces[5][8] = front[2];
+
+            // move top to back
+            _rubikCubeFaces[4][0] = top[0];
+            _rubikCubeFaces[4][3] = top[1];
+            _rubikCubeFaces[4][6] = top[2];
+
+            // move back to bottom
+            _rubikCubeFaces[2][2] = back[0];
+            _rubikCubeFaces[2][5] = back[1];
+            _rubikCubeFaces[2][8] = back[2];
+
+            // move bottom to front
+            _rubikCubeFaces[0][2] = bottom[0];
+            _rubikCubeFaces[0][5] = bottom[0];
+            _rubikCubeFaces[0][8] = bottom[0];
+
         }
 
         public void rotateRight90AntiClockwise()
         {
-            throw new NotImplementedException();
+            char[] front = [
+               _rubikCubeFaces[0][2],
+                _rubikCubeFaces[0][5],
+                _rubikCubeFaces[0][8],
+            ];
+
+            char[] top = [
+                _rubikCubeFaces[5][2],
+                _rubikCubeFaces[5][5],
+                _rubikCubeFaces[5][8],
+            ];
+
+            char[] back = [
+                _rubikCubeFaces[4][0],
+                _rubikCubeFaces[4][3],
+                _rubikCubeFaces[4][6],
+            ];
+
+            char[] bottom = [
+                _rubikCubeFaces[2][2],
+                _rubikCubeFaces[2][5],
+                _rubikCubeFaces[2][8],
+            ];
+
+            // move back to top
+            _rubikCubeFaces[5][2] = back[0];
+            _rubikCubeFaces[5][5] = back[1];
+            _rubikCubeFaces[5][8] = back[2];
+
+            // move top to front
+            _rubikCubeFaces[0][2] = top[0];
+            _rubikCubeFaces[0][5] = top[1];
+            _rubikCubeFaces[0][8] = top[2];
+
+            // move front to bottom
+            _rubikCubeFaces[2][2] = front[0];
+            _rubikCubeFaces[2][5] = front[1];
+            _rubikCubeFaces[2][8] = front[2];
+
+            // move bottom to back
+            _rubikCubeFaces[4][0] = bottom[0];
+            _rubikCubeFaces[4][3] = bottom[1];
+            _rubikCubeFaces[4][6] = bottom[2];
         }
 
 
