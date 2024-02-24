@@ -1,0 +1,65 @@
+﻿@model RubikCube.Models.RubikCubeModel
+
+@{
+    void renderFaces(int face, char position = 'T')
+    {
+        int startingValue = 0;
+        switch (position)
+        {
+            case 'T':
+                startingValue = 0;
+                break;
+            case 'M':
+                startingValue = 3;
+                break;
+            case 'B':
+                startingValue = 6;
+                break;
+        }
+
+        <div class="rubik-face__position rubik-face__position--@position">
+            @for (var i = startingValue; i < startingValue + 3; ++i)
+            {
+                <span class="rubik__face-colour rubik__face-colour--@(Model.faces[face][i])"></span>
+            }
+        </div>
+    }
+}
+
+<div class="rubik__face rubik__face--row-1">
+    @{renderFaces(5, 'T');}
+    @{renderFaces(5, 'M');}
+    @{renderFaces(5, 'B');}
+</div>
+<div class="rubik__face rubik__face--row-2">
+    <div>
+        @{renderFaces(1, 'T');}
+        @{renderFaces(1, 'M');}
+        @{renderFaces(1, 'B');}
+    </div>
+
+    <div>
+        @{renderFaces(0, 'T');}
+        @{renderFaces(0, 'M');}
+        @{renderFaces(0, 'B');}
+    </div>
+
+        <div>
+        @{renderFaces(3, 'T');}
+        @{renderFaces(3, 'M');}
+        @{renderFaces(3, 'B');}
+    </div>
+
+    <div>
+        @{renderFaces(4, 'T');}
+        @{renderFaces(4, 'M');}
+        @{renderFaces(4, 'B');}
+    </div>
+
+
+</div>
+<div class="rubik__face rubik__face--row-3">
+    @{renderFaces(2, 'T');}
+    @{renderFaces(2, 'M');}
+    @{renderFaces(2, 'B');}
+</div>

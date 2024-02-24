@@ -1,0 +1,158 @@
+﻿@model RubikCube.Models.RubikCubeModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+
+   
+}
+
+<div class="text-center">
+    <h1>Rubik Cube</h1>
+
+    <div>
+        <div class="key-container">
+            <div>
+                <p>Green</p><span class="rubik__face-colour rubik__face-colour--G"></span>
+            </div>
+            
+            <div>
+                <p>Orange</p> <span class="rubik__face-colour rubik__face-colour--O"></span>
+            </div>
+
+            <div>
+                <p>Yellow</p> <span class="rubik__face-colour rubik__face-colour--Y"></span>
+            </div>
+            
+            
+            <div>
+                <p>Red</p> <span class="rubik__face-colour rubik__face-colour--R"></span>
+            </div>
+
+            <div>
+                <p>Blue</p> <span class="rubik__face-colour rubik__face-colour--B"></span>
+            </div>
+
+            <div>
+                <p>White</p> <span class="rubik__face-colour rubik__face-colour--W"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="controls__group">
+            <button hx-get="/Home/Reset" hx-target="#rubik-container" type="button">Reset</button>
+
+        </div>
+
+        <div class="controls__group">
+            <button hx-get="/Home/RotateFront90Clockwise" hx-target="#rubik-container" type="button">Rotate front 90 clockwise</button>
+
+            <button hx-get="/Home/RotateFront90AntiClockwise" hx-target="#rubik-container" type="button">Rotate front 90 anti clockwise</button>
+        </div>
+
+        <div class="controls__group">
+            <button hx-get="/Home/RotateBack90Clockwise" hx-target="#rubik-container" type="button">Rotate back 90 clockwise</button>
+
+            <button hx-get="/Home/RotateBack90AntiClockwise" hx-target="#rubik-container" type="button">Rotate back 90 anti clockwise</button>
+        </div>
+
+        <div class="controls__group">
+            <button hx-get="/Home/RotateUp90Clockwise" hx-target="#rubik-container" type="button">Rotate up 90 clockwise</button>
+
+            <button hx-get="/Home/RotateUp90AntiClockwise" hx-target="#rubik-container" type="button">Rotate up 90 anti clockwise</button>
+        </div>
+    </div>
+
+
+    <div id="rubik-container" class="rubik__container">
+        <partial name="~/Views/Partials/RubikContainer.cshtml" />
+    </div>
+
+</div>
+
+<style>
+    .key-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .key-container > div {
+        display: flex;
+    }
+
+    .key-container > div > span {
+        margin-left: 10px;
+    }
+
+    .controls {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .controls__group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 10px;
+    }
+
+    .rubik__container,
+    .rubik__face {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .rubik__face--row-1 {
+        margin-right: 173px;
+    }
+
+    .rubik__face--row-2 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .rubik__face--row-2 > div {
+        padding-right: 10px;
+    }
+
+    .rubik__face--row-3 {
+        margin-right: 173px;
+    }
+
+    .rubik__face-colour {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+
+    .rubik-face__position {
+        
+    }
+
+    .rubik__face-colour--G {
+        background-color: green;
+    }
+
+    .rubik__face-colour--O {
+        background-color: orange;
+    }
+
+    .rubik__face-colour--Y {
+        background-color: #f1c40f;
+    }
+
+    .rubik__face-colour--R {
+        background-color: red;
+    }
+
+    .rubik__face-colour--B {
+        background-color: darkblue;
+    }
+
+    .rubik__face-colour--W {
+        background-color: whitesmoke;
+    }
+</style>
