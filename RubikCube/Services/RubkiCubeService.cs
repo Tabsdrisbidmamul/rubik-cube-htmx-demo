@@ -15,12 +15,12 @@ namespace RubikCube.Services
 
     public class RubkiCubeService : IRubikCube
     {
-        int frontRotation = 0;
-        int backRotation = 0;
-        int upRotation = 0;
-        int downRotation = 0;
-        int rightRotation = 0;
-        int leftRotation = 0;
+        private int frontRotation = 0;
+        private int backRotation = 0;
+        private int upRotation = 0;
+        private int downRotation = 0;
+        private int rightRotation = 0;
+        private int leftRotation = 0;
 
         private char[][] _rubikCubeFaces = [
             // Tl    // TR // ML     //MR //BL      //BR   
@@ -37,11 +37,11 @@ namespace RubikCube.Services
             _rubikCubeFaces = [
             // Tl    // TR // ML     //MR //BL      //BR   
             ['G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G',], // 0:Front
-                ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O',], // 1:Left
-                ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y',], // 2:Bottom
-                ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R',], // 3:Right
-                ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B',], // 4:Back
-                ['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',], // 5:Top
+            ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O',], // 1:Left
+            ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y',], // 2:Bottom
+            ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R',], // 3:Right
+            ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B',], // 4:Back
+            ['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',], // 5:Top
             ];
 
             frontRotation = 0;
