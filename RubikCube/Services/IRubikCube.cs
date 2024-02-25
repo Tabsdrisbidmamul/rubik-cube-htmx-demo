@@ -2,20 +2,20 @@
 {
     public interface IRubikCube
     {
-        char[][] getRubikFaces();
-        void reset();
-        void rotateFront90Clockwise();
-        void rotateFront90AntiClockwise();
-        void rotateBack90Clockwise();
-        void rotateBack90AntiClockwise();
-        void rotateUp90Clockwise();
-        void rotateUp90AntiClockwise();
-        void rotateDown90Clockwise();
-        void rotateDown90AntiClockwise();
-        void rotateRight90Clockwise();
-        void rotateRight90AntiClockwise();
-        void rotateLeft90Clockwise();
-        void rotateLeft90AntiClockwise();
+        char[][] GetRubikFaces();
+        void Reset();
+        void RotateFront90Clockwise();
+        void RotateFront90AntiClockwise();
+        void RotateBack90Clockwise();
+        void RotateBack90AntiClockwise();
+        void RotateUp90Clockwise();
+        void RotateUp90AntiClockwise();
+        void RotateDown90Clockwise();
+        void RotateDown90AntiClockwise();
+        void RotateRight90Clockwise();
+        void RotateRight90AntiClockwise();
+        void RotateLeft90Clockwise();
+        void RotateLeft90AntiClockwise();
         
         
     }

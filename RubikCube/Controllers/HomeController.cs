@@ -20,124 +20,124 @@ namespace RubikCube.Controllers
         {
             
             return View(new RubikCubeModel {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult Reset()    
         {
-            _rubikCubeService.reset();
+            _rubikCubeService.Reset();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateFront90Clockwise() 
         {
-            _rubikCubeService.rotateFront90Clockwise();
+            _rubikCubeService.RotateFront90Clockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateFront90AntiClockwise() 
         {
-            _rubikCubeService.rotateFront90AntiClockwise();
+            _rubikCubeService.RotateFront90AntiClockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateBack90Clockwise() 
         {
-            _rubikCubeService.rotateBack90Clockwise();
+            _rubikCubeService.RotateBack90Clockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateBack90AntiClockwise()
         {
-            _rubikCubeService.rotateBack90AntiClockwise();
+            _rubikCubeService.RotateBack90AntiClockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateUp90Clockwise() 
         {
-            _rubikCubeService.rotateUp90Clockwise();
+            _rubikCubeService.RotateUp90Clockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateUp90AntiClockwise()
         {
-            _rubikCubeService.rotateUp90AntiClockwise();
+            _rubikCubeService.RotateUp90AntiClockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateDown90Clockwise() 
         {
-            _rubikCubeService.rotateDown90Clockwise();
+            _rubikCubeService.RotateDown90Clockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateDown90AntiClockwise()
         {
-            _rubikCubeService.rotateDown90AntiClockwise();
+            _rubikCubeService.RotateDown90AntiClockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
         
         public IActionResult RotateRight90Clockwise()
         {
-            _rubikCubeService.rotateRight90Clockwise();
+            _rubikCubeService.RotateRight90Clockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateRight90AntiClockwise()
         {
-            _rubikCubeService.rotateRight90AntiClockwise();
+            _rubikCubeService.RotateRight90AntiClockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateLeft90Clockwise()
         {
-            _rubikCubeService.rotateLeft90Clockwise();
+            _rubikCubeService.RotateLeft90Clockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 
         public IActionResult RotateLeft90AntiClockwise()
         {
-            _rubikCubeService.rotateLeft90AntiClockwise();
+            _rubikCubeService.RotateLeft90AntiClockwise();
             return PartialView("~/Views/Partials/RubikContainer.cshtml", new RubikCubeModel
             {
-                faces = _rubikCubeService.getRubikFaces()
+                faces = _rubikCubeService.GetRubikFaces()
             });
         }
 

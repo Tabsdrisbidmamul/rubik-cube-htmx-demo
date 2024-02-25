@@ -32,7 +32,7 @@ namespace RubikCube.Services
             ['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',], // 5:Top
         ];
 
-        public void reset()
+        public void Reset()
         {
             _rubikCubeFaces = [
             // Tl    // TR // ML     //MR //BL      //BR   
@@ -54,12 +54,12 @@ namespace RubikCube.Services
 
 
 
-        public char[][] getRubikFaces()
+        public char[][] GetRubikFaces()
         {
             return _rubikCubeFaces;
         }
 
-        public void rotateFront90Clockwise()
+        public void RotateFront90Clockwise()
         {
             if(frontRotation == 360)
             {
@@ -117,7 +117,7 @@ namespace RubikCube.Services
             _rubikCubeFaces[1][8] = bottom[2];
         }
 
-        public void rotateFront90AntiClockwise()
+        public void RotateFront90AntiClockwise()
         {
             if (frontRotation == -360)
             {
@@ -176,7 +176,7 @@ namespace RubikCube.Services
         }
 
 
-        public void rotateBack90Clockwise()
+        public void RotateBack90Clockwise()
         {
             if (backRotation == 360)
             {
@@ -234,7 +234,7 @@ namespace RubikCube.Services
             _rubikCubeFaces[2][8] = left[2];
         }
 
-        public void rotateBack90AntiClockwise()
+        public void RotateBack90AntiClockwise()
         {
             if (backRotation == -360)
             {
@@ -293,7 +293,7 @@ namespace RubikCube.Services
 
         }
 
-        public void rotateUp90Clockwise()
+        public void RotateUp90Clockwise()
         {
             if (upRotation == 360)
             {
@@ -351,7 +351,7 @@ namespace RubikCube.Services
             _rubikCubeFaces[0][2] = right[2];
         }
 
-        public void rotateUp90AntiClockwise()
+        public void RotateUp90AntiClockwise()
         {
             if (upRotation == -360)
             {
@@ -409,7 +409,7 @@ namespace RubikCube.Services
             _rubikCubeFaces[4][2] = right[2];
         }
 
-        public void rotateDown90Clockwise()
+        public void RotateDown90Clockwise()
         {
             if (downRotation == 360)
             {
@@ -467,7 +467,7 @@ namespace RubikCube.Services
             _rubikCubeFaces[4][8] = right[2];
         }
 
-        public void rotateDown90AntiClockwise()
+        public void RotateDown90AntiClockwise()
         {
             if (downRotation == -360)
             {
@@ -526,7 +526,7 @@ namespace RubikCube.Services
 
         }
 
-        public void rotateRight90Clockwise()
+        public void RotateRight90Clockwise()
         {
             if (rightRotation == 360)
             {
@@ -585,7 +585,7 @@ namespace RubikCube.Services
 
         }
 
-        public void rotateRight90AntiClockwise()
+        public void RotateRight90AntiClockwise()
         {
             if(rightRotation == -360)
             {
@@ -643,7 +643,7 @@ namespace RubikCube.Services
             _rubikCubeFaces[4][6] = bottom[0];
         }
 
-        public void rotateLeft90Clockwise()
+        public void RotateLeft90Clockwise()
         {
             if (leftRotation == 360)
             {
@@ -702,7 +702,7 @@ namespace RubikCube.Services
 
         }
 
-        public void rotateLeft90AntiClockwise()
+        public void RotateLeft90AntiClockwise()
         {
             if (leftRotation == -360)
             {
