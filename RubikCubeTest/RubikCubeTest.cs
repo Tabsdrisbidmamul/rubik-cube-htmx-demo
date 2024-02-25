@@ -114,6 +114,111 @@ namespace RubikCubeTest
             Assert.That(_rubikCubeService.GetRubikFaces(), Is.EqualTo(modifiedFaces));
         }
 
+        [Test]
+        public void Rotate_Back_90_Clockwise_Succesfully()
+        {
+            _rubikCubeService.RotateBack90Clockwise();
 
+            char[][] modifiedFaces = [
+                ['G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G'],
+                ['W', 'O', 'O', 'W', 'O', 'O', 'W', 'O', 'O'],
+                ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'O', 'O', 'O'],
+                ['R', 'R', 'Y', 'R', 'R', 'Y', 'R', 'R', 'Y'],
+                ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
+                ['R', 'R', 'R', 'W', 'W', 'W', 'W', 'W', 'W'],
+            ];
+
+            Assert.That(_rubikCubeService.GetRubikFaces(), Is.EqualTo(modifiedFaces));
+        }
+
+        [Test]
+        public void Rotate_Back_90_Anti_Clockwise_Successfully()
+        {
+            _rubikCubeService.RotateBack90AntiClockwise();
+
+            char[][] modifiedFaces =
+            [
+                ['G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G'],
+                ['Y', 'O', 'O', 'Y', 'O', 'O', 'Y', 'O', 'O'],
+                ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'R', 'R', 'R'],
+                ['R', 'R', 'W', 'R', 'R', 'W', 'R', 'R', 'W'],
+                ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
+                ['O', 'O', 'O', 'W', 'W', 'W', 'W', 'W', 'W'],
+            ];
+
+            Assert.That(_rubikCubeService.GetRubikFaces(), Is.EqualTo(modifiedFaces));
+        }
+
+        [Test]
+        public void Rotate_Left_90_Clockwise_Successfully()
+        {
+            _rubikCubeService.RotateLeft90Clockwise();
+
+           char[][] modifiedFaces =
+           [
+               ['W', 'G', 'G', 'W', 'G', 'G', 'W', 'G', 'G'],
+               ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+               ['G', 'Y', 'Y', 'G', 'Y', 'Y', 'G', 'Y', 'Y'],
+               ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'],
+               ['B', 'B', 'Y', 'B', 'B', 'Y', 'B', 'B', 'Y'],
+               ['B', 'W', 'W', 'B', 'W', 'W', 'B', 'W', 'W']
+           ];
+
+            Assert.That(_rubikCubeService.GetRubikFaces(), Is.EqualTo(modifiedFaces));
+        }
+
+        [Test]
+        public void Rotate_Left_90_Anti_Clockwise_Successfully()
+        {
+            _rubikCubeService.RotateLeft90AntiClockwise();
+
+            char[][] modifiedFaces =
+            [
+                ['Y', 'G', 'G', 'Y', 'G', 'G', 'Y', 'G', 'G'],
+                ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+                ['B', 'Y', 'Y', 'B', 'Y', 'Y', 'B', 'Y', 'Y'],
+                ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'],
+                ['B', 'B', 'W', 'B', 'B', 'W', 'B', 'B', 'W'],
+                ['G', 'W', 'W', 'G', 'W', 'W', 'G', 'W', 'W']
+            ];
+
+            Assert.That(_rubikCubeService.GetRubikFaces(), Is.EqualTo(modifiedFaces));
+        }
+
+        [Test]
+        public void Rotate_Down_90_Clockwise_Successfully()
+        {
+            _rubikCubeService.RotateDown90Clockwise();
+
+            char[][] modifiedFaces =
+            [
+                ['G', 'G', 'G', 'G', 'G', 'G', 'O', 'O', 'O'],
+                ['O', 'O', 'O', 'O', 'O', 'O', 'B', 'B', 'B'],
+                ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y'],
+                ['R', 'R', 'R', 'R', 'R', 'R', 'G', 'G', 'G'],
+                ['B', 'B', 'B', 'B', 'B', 'B', 'R', 'R', 'R'],
+                ['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'],
+            ];
+
+            Assert.That(_rubikCubeService.GetRubikFaces(), Is.EqualTo(modifiedFaces));
+        }
+
+        [Test]
+        public void Rotate_Down_90_Anti_Clockwise_Successfully()
+        {
+            _rubikCubeService.RotateDown90AntiClockwise();
+
+            char[][] modifiedFaces =
+            [
+                ['G', 'G', 'G', 'G', 'G', 'G', 'R', 'R', 'R'],
+                ['O', 'O', 'O', 'O', 'O', 'O', 'G', 'G', 'G'],
+                ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y'],
+                ['R', 'R', 'R', 'R', 'R', 'R', 'B', 'B', 'B'],
+                ['B', 'B', 'B', 'B', 'B', 'B', 'O', 'O', 'O'],
+                ['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'],
+            ];
+
+            Assert.That(_rubikCubeService.GetRubikFaces(), Is.EqualTo(modifiedFaces));
+        }
     }
 }
