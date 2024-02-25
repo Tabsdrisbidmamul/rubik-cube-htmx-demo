@@ -13,7 +13,7 @@ namespace RubikCube.Services
         Left = 1,
     }
 
-    public class RubkiCubeSerrvice : IRubikCube
+    public class RubkiCubeService : IRubikCube
     {
         int frontRotation = 0;
         int backRotation = 0;
