@@ -2,7 +2,7 @@
 Built as a MVC application to show both colour and real time feedback when pressing the controls, uses HTMX to interact with the server and gather the updated HTML to render. 
 
 ## Setup
-- minimum version of dotnet 8 -> [dotnet 8.0.100](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer)
+- minimum version of dotnet 8,  -> [dotnet 8.0.100](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 ## To run
 
